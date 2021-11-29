@@ -1,0 +1,170 @@
+#campaigns {
+  height: 550px;
+  position: relative;
+}
+
+#campaigns > .slides {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.25s;
+  z-index: 1;
+}
+
+#campaigns > .slides-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+#campaigns > .slides > .campaign_story {
+  width: 100%;
+  max-width: 1160px;
+  margin: 166px auto 0;
+  padding-left: 27px;
+  font-size: 30px;
+  font-weight: 100;
+  color: #070707;
+  line-height: 57px;
+  white-space: pre;
+}
+
+#dots {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  bottom: 34px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 0 11px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.dot-active {
+  background-color: #8b572a;
+}
+
+#products {
+  max-width: 1160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px 40px;
+  max-width: 1160px;
+  padding: 70px 24px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+#products > .product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#products > .product > img {
+  width: 100%;
+}
+
+.product_colors {
+  display: flex;
+  margin-top: 20px;
+}
+
+.product_colors > .product_color {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 1px #bbbbbb;
+}
+
+#products > .product > .product_title {
+  margin-top: 20px;
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #3f3a3a;
+}
+
+#products > .product > .product_price {
+  margin-top: 10px;
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #3f3a3a;
+}
+
+#no-products > h2 {
+  padding-bottom: 140px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*************
+Media Queries
+**************/
+
+@media screen and (max-width: 768px) {
+  #products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #campaigns {
+    height: 185px;
+  }
+
+  #campaigns > .slides > .campaign_story {
+    width: 100%;
+    height: 128px;
+    margin-top: 20px;
+    padding-left: 23px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  #dots {
+    bottom: 20px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  #products {
+    grid-gap: 24px 6px;
+    padding: 15px 30px;
+  }
+
+  #products > .product > .product_colors {
+    margin-top: 8px;
+  }
+
+  #products > .product > .product_colors > .product_color {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+  }
+
+  #products > .product > .product_title {
+    margin-top: 10px;
+    line-height: 14px;
+    font-size: 12px;
+    letter-spacing: 2.4px;
+  }
+
+  #products > .product > .product_price {
+    margin-top: 8px;
+    line-height: 14px;
+    font-size: 12px;
+    letter-spacing: 2.4px;
+  }
+}
